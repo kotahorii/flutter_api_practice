@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_api_practice/views/widgets/recipe_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,6 +14,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: const [
             Icon(Icons.restaurant_menu),
             SizedBox(
@@ -21,6 +23,12 @@ class _HomePageState extends State<HomePage> {
             Text('Food Recipe')
           ],
         ),
+      ),
+      body: RecipeCard(
+        title: 'My recipe',
+        cookTime: '30 min',
+        rating: '4.3',
+        thumbnailUrl: 'http',
       ),
     );
   }
