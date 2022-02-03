@@ -21,9 +21,4 @@ class Recipe {
   static List<Recipe> recipeFromSnapshot(List snapshot) {
     return snapshot.map((data) => Recipe.fromJson(data)).toList();
   }
-
-  @override
-  String toString() {
-    return 'Recipe {name: $name, image: $images, rating: $rating, $rating, totalTime: $totalTime}';
-  }
 }
